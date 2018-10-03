@@ -18,8 +18,8 @@ class WTMap extends Component {
     }
   
     loadMap = () => { // script on index.html. Can I ref that?
-      loadScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBj5AzHYC1kUPRnvaT6G6zsAONHSpKmoqQ&callback=initMap")
-      window.initMap = this.initMap
+        scriptSrc();
+        window.initMap = this.initMap
     }
 
     getVenues = () => {
@@ -89,10 +89,10 @@ class WTMap extends Component {
   }
 }
 
-function loadScript(source) {
-  var index = window.document.getElementsByTagName("script")[0]
-  var script = window.document.createElement("script")
-  script.src = source
+function scriptSrc() {
+  let index = window.document.getElementsByTagName("script")[0]
+  let script = window.document.createElement("script")
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBj5AzHYC1kUPRnvaT6G6zsAONHSpKmoqQ&callback=initMap'
   script.async = true
   script.defer = true
   index.parentNode.insertBefore(script, index)
