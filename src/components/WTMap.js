@@ -17,7 +17,7 @@ class WTMap extends Component {
       // this.loadMap()
     }
   
-    loadMap = () => { // script on index.html. Can I ref that?
+    loadMap = () => { 
         scriptSrc();
         window.initMap = this.initMap
     }
@@ -45,29 +45,29 @@ class WTMap extends Component {
     
     initMap = () => {
 
+        let google = window.google
         // create a map 
-        const map = new window.google.maps.Map(document.getElementById('map'), {
+        const map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 28.385299, lng: -81.563874},
             zoom: 13
         })
-        
         // create an infowindow
-        let infowindow = new window.google.maps.InfoWindow()
-
+        let infowindow = new google.maps.InfoWindow()
+        
         // display dynamic markers
         // eslint-disable-next-line
         this.state.venues.map(myVenue => {
 
         let contentString = `${myVenue.venue.name}` 
 
-        let marker = new window.google.maps.Marker({
+        let marker = new google.maps.Marker({
         position: {lat: myVenue.venue.location.lat, lng: myVenue.venue.location.lng},
         map: map,
         title: myVenue.venue.name
         })
 
         // click on a marker
-        marker.addListener('click', function() {
+        marker.addListener('click', function() {   
             // Change the Content
             infowindow.setContent(contentString)
             // Open an InfoWindow
