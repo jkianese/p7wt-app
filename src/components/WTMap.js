@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 class WTMap extends Component {
-  
-    state = {
-      venues: []
+    
+    // Set Constructor and State
+    constructor(props) {
+        super(props);
+        this.state = {
+            venues: []
+        };
+        this.initMap = this.initMap.bind(this);
     }
   
     componentDidMount() {
