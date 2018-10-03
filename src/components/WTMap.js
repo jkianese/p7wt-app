@@ -49,6 +49,7 @@ class App extends Component {
     var infowindow = new window.google.maps.InfoWindow()
 
     // display dynamic markers
+    // eslint-disable-next-line
     this.state.venues.map(myVenue => {
 
     var contentString = `${myVenue.venue.name}` // Removed Place Name in WT 
