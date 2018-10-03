@@ -81,7 +81,7 @@ class WTMap extends Component {
   render () {
     return (
       <main>
-        <div id="map">
+        <div role="application" id="map">
           
         </div>
       </main>  
