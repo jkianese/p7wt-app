@@ -44,38 +44,36 @@ class WTMap extends Component {
     }
     
     initMap = () => {
-      
-      // create a map 
-      const map = new window.google.maps.Map(document.getElementById('map'), {
-        center: {lat: 28.385299, lng: -81.563874},
-        zoom: 13
-      })
-      
-      // create an infowindow
-    let infowindow = new window.google.maps.InfoWindow()
 
-    // display dynamic markers
-    // eslint-disable-next-line
-    this.state.venues.map(myVenue => {
+        // create a map 
+        const map = new window.google.maps.Map(document.getElementById('map'), {
+            center: {lat: 28.385299, lng: -81.563874},
+            zoom: 13
+        })
+        
+        // create an infowindow
+        let infowindow = new window.google.maps.InfoWindow()
 
-    let contentString = `${myVenue.venue.name}` 
+        // display dynamic markers
+        // eslint-disable-next-line
+        this.state.venues.map(myVenue => {
 
-    let marker = new window.google.maps.Marker({
-      position: {lat: myVenue.venue.location.lat, lng: myVenue.venue.location.lng},
-      map: map,
-      title: myVenue.venue.name
-    })
+        let contentString = `${myVenue.venue.name}` 
 
-    // click on a marker
-    marker.addListener('click', function() {
-      
-    // Change the Content
-    infowindow.setContent(contentString)
-    
-    // Open an InfoWindow
-    infowindow.open(map, marker)
-    })
-  });  
+        let marker = new window.google.maps.Marker({
+        position: {lat: myVenue.venue.location.lat, lng: myVenue.venue.location.lng},
+        map: map,
+        title: myVenue.venue.name
+        })
+
+        // click on a marker
+        marker.addListener('click', function() {
+            // Change the Content
+            infowindow.setContent(contentString)
+            // Open an InfoWindow
+            infowindow.open(map, marker)
+        })
+    });  
       
 }      
 
