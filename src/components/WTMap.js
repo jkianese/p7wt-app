@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './App.css';
 import axios from 'axios';
 
 class App extends Component {
@@ -38,7 +37,7 @@ class App extends Component {
           console.log("Error: " + error)
         })
     }
-
+    
     initMap = () => {
       // create a map 
       const map = new window.google.maps.Map(document.getElementById('map'), {
