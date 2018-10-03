@@ -6,13 +6,13 @@ import WTMap from './components/WTMap'
 class App extends Component {
   
   render () {
+
     return (
-      <main>
-        <div id="map">
-          <WTMap />         
-        </div>
-      </main>  
-    )
+      <div>
+        {/*<h1 className="heading"> Pittsburgh, PA </h1>*/}
+        <WTMap  />
+      </div>
+    );
   }
 }
 export default App

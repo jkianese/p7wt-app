@@ -44,6 +44,7 @@ class WTMap extends Component {
     }
     
     initMap = () => {
+      
       // create a map 
       const map = new window.google.maps.Map(document.getElementById('map'), {
         center: {lat: 28.385299, lng: -81.563874},
@@ -51,15 +52,15 @@ class WTMap extends Component {
       })
       
       // create an infowindow
-    var infowindow = new window.google.maps.InfoWindow()
+    let infowindow = new window.google.maps.InfoWindow()
 
     // display dynamic markers
     // eslint-disable-next-line
     this.state.venues.map(myVenue => {
 
-    var contentString = `${myVenue.venue.name}` // Removed Place Name in WT 
+    let contentString = `${myVenue.venue.name}` 
 
-    var marker = new window.google.maps.Marker({
+    let marker = new window.google.maps.Marker({
       position: {lat: myVenue.venue.location.lat, lng: myVenue.venue.location.lng},
       map: map,
       title: myVenue.venue.name
