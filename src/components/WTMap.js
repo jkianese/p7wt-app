@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class App extends Component {
+class WTMap extends Component {
   
     state = {
       venues: []
@@ -93,4 +93,4 @@ function loadScript(source) {
   index.parentNode.insertBefore(script, index)
 }
 
-export default App
+export default WTMap
