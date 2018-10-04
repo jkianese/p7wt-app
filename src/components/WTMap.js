@@ -27,8 +27,8 @@ class WTMap extends Component {
       const parameters = {
         client_id: "F1BIU3KU3RZFBQKCLKJ2MX1AT2ZRZFYRUXTJUMFGA1YUS5ZF",
         client_secret: "N1HLP0MSWYJJATAS3CBQTTSZ2WLME5RB2TAUWHGE2UXZ5A1E",
-        query: "outdoors",
-        ll: "28.385299, -81.563874",
+        query: "arts",
+        ll: "40.44189, -80.0129674",
         v: "20181012"
       }
       // npm install axios to run
@@ -48,7 +48,7 @@ class WTMap extends Component {
         let google = window.google
         // create a map 
         const map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 28.385299, lng: -81.563874},
+            center: {lat: 40.44189, lng: -80.012967},
             zoom: 13
         })
         // create an infowindow
