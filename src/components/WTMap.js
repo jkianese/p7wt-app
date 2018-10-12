@@ -25,8 +25,8 @@ class WTMap extends Component {
     getVenues = () => {
       const endPoint = "https://api.foursquare.com/v2/venues/explore?"
       const parameters = {
-        client_id: "F1BIU3KU3RZFBQKCLKJ2MX1AT2ZRZFYRUXTJUMFGA1YUS5ZF",
-        client_secret: "N1HLP0MSWYJJATAS3CBQTTSZ2WLME5RB2TAUWHGE2UXZ5A1E",
+        client_id: "",
+        client_secret: "",
         //section: "topPicks",
         query: "arts",
         ll: "40.448506, -80.002501",
@@ -93,7 +93,7 @@ class WTMap extends Component {
 function scriptSrc() {
   let index = window.document.getElementsByTagName("script")[0]
   let script = window.document.createElement("script")
-  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBj5AzHYC1kUPRnvaT6G6zsAONHSpKmoqQ&callback=initMap'
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=&callback=initMap'
   script.async = true
   script.defer = true
   index.parentNode.insertBefore(script, index)
